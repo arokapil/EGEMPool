@@ -30,13 +30,9 @@ type UnlockerConfig struct {
 }
 
 const minDepth = 16
-// const byzantiumHardForkHeight = 10000000
 const era0Height = 0
 const era1Height = 10000000
 const era2Height = 20000000
-
-// var homesteadReward = math.MustParseBig256("5000000000000000000")
-// var byzantiumReward = math.MustParseBig256("4000000000000000000")
 
 var era0Reward = math.MustParseBig256("8000000000000000000")
 var era1Reward = math.MustParseBig256("4000000000000000000")
