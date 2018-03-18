@@ -1,10 +1,10 @@
-## Open Source Ellaism Mining Pool
+## Open Source EGEM Mining Pool
 
-Consider mining in [Dev Pool](https://pool.ellaism.org) or [donate to Dev Fund](https://ellaism.org/donate/) if you like this fork.
+Consider mining in [Dev Pool](https://pool.egem.io).
 
 ### Features
 
-**This pool is being further developed to provide an easy to use pool for Ethereum miners. This software is functional however an optimised release of the pool is expected soon. Testing and bug submissions are welcome!**
+**This pool is being further developed to provide an easy to use pool for EGEM miners. This software is functional however an optimised release of the pool is expected soon. Testing and bug submissions are welcome!**
 
 * Support for HTTP and Stratum mining
 * Detailed block stats with luck percentage and full reward
@@ -23,30 +23,30 @@ Consider mining in [Dev Pool](https://pool.ellaism.org) or [donate to Dev Fund](
 
 Dependencies:
 
-  * go >= 1.6
+  * go >= 1.8
   * geth or parity
   * redis-server >= 2.8.0
   * nodejs >= 4 LTS
   * nginx
 
-**I highly recommend to use Ubuntu 16.04 LTS.**
+**We highly recommend to use Ubuntu 16.04 LTS.** 
 
-First install  [go-ethereum](https://github.com/ethereum/go-ethereum/wiki/Installation-Instructions-for-Ubuntu).
+First install  [go-egem](https://github.com/TeamEGEM/go-egem).
 
 Clone & compile:
 
     git config --global http.https://gopkg.in.followRedirects true
-    git clone https://github.com/sammy007/open-ethereum-pool.git
-    cd open-ethereum-pool
+    git clone https://github.com/TeamEGEM/open-egem-pool.git
+    cd open-egem-pool
     make
 
 Install redis-server.
 
+    apt-get install redis-server
+
 ### Running Pool
 
-    ./build/bin/open-ethereum-pool config.json
-
-You can use Ubuntu upstart - check for sample config in <code>upstart.conf</code>.
+    ./build/bin/open-egem-pool config.json
 
 ### Building Frontend
 
@@ -81,13 +81,16 @@ and add this setting after <code>location /</code>:
         proxy_pass http://api;
     }
 
+
+#### SSL Implementation 
+
+    https://certbot.eff.org/lets-encrypt/ubuntuxenial-nginx
+
 #### Customization
 
-You can customize the layout using built-in web server with live reload:
+You can customize the layout using built-in web server with live reload: **Don't use built-in web server in production**.
 
     ember server --port 8082 --environment development
-
-**Don't use built-in web server in production**.
 
 Check out <code>www/app/templates</code> directory and edit these templates
 in order to customise the frontend.
@@ -304,22 +307,8 @@ I recommend this deployment strategy:
 * Don't run payouts and unlocker modules as part of mining node. Create separate configs for both, launch independently and make sure you have a single instance of each module running.
 * If `poolFeeAddress` is not specified all pool profit will remain on coinbase address. If it specified, make sure to periodically send some dust back required for payments.
 
-### Alternative Ethereum Implementations
-
-This pool is tested to work with [Ethcore's Parity](https://github.com/ethcore/parity). Mining and block unlocking works, but I am not sure about payouts and suggest to run *official* geth node for payments.
-
 ### Credits
 
-Made by sammy007. Licensed under GPLv3.
-
-#### Contributors
-
-[Alex Leverington](https://github.com/subtly)
-
-### Donations
-
-ETH/ETC: 0xb85150eb365e7df0941f0cf08235f987ba91506a
-
-![](https://cdn.pbrd.co/images/GP5tI1D.png)
+Made by [sammy007](https://github.com/sammy007).. Licensed under GPLv3.
 
 Highly appreciated.
