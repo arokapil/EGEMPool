@@ -308,22 +308,8 @@ I recommend this deployment strategy:
 * Don't run payouts and unlocker modules as part of mining node. Create separate configs for both, launch independently and make sure you have a single instance of each module running.
 * If `poolFeeAddress` is not specified all pool profit will remain on coinbase address. If it specified, make sure to periodically send some dust back required for payments.
 
-### Alternative Ethereum Implementations
-
-This pool is tested to work with [Ethcore's Parity](https://github.com/ethcore/parity). Mining and block unlocking works, but I am not sure about payouts and suggest to run *official* geth node for payments.
-
 ### Credits
 
-Made by sammy007. Licensed under GPLv3.
-
-#### Contributors
-
-[Alex Leverington](https://github.com/subtly)
-
-### Donations
-
-ETH/ETC: 0xb85150eb365e7df0941f0cf08235f987ba91506a
-
-![](https://cdn.pbrd.co/images/GP5tI1D.png)
+Made by [sammy007](https://github.com/sammy007).. Licensed under GPLv3.
 
 Highly appreciated.
