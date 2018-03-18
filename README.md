@@ -23,7 +23,7 @@ Consider mining in [Dev Pool](https://pool.egem.io).
 
 Dependencies:
 
-  * go >= 1.6
+  * go >= 1.8
   * geth or parity
   * redis-server >= 2.8.0
   * nodejs >= 4 LTS
@@ -31,7 +31,7 @@ Dependencies:
 
 **We highly recommend to use Ubuntu 16.04 LTS.** 
 
-First install  [go-ethereum](https://github.com/ethereum/go-ethereum/wiki/Installation-Instructions-for-Ubuntu).
+First install  [go-egem](https://github.com/TeamEGEM/go-egem).
 
 Clone & compile:
 
@@ -47,7 +47,6 @@ Install redis-server.
 ### Running Pool
 
     ./build/bin/open-egem-pool config.json
-
 
 ### Building Frontend
 
