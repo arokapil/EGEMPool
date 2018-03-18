@@ -89,11 +89,9 @@ and add this setting after <code>location /</code>:
 
 #### Customization
 
-You can customize the layout using built-in web server with live reload:
+You can customize the layout using built-in web server with live reload: **Don't use built-in web server in production**.
 
     ember server --port 8082 --environment development
-
-**Don't use built-in web server in production**.
 
 Check out <code>www/app/templates</code> directory and edit these templates
 in order to customise the frontend.
