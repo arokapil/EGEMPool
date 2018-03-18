@@ -1,10 +1,10 @@
-## Open Source Ellaism Mining Pool
+## Open Source EGEM Mining Pool
 
-Consider mining in [Dev Pool](https://pool.ellaism.org) or [donate to Dev Fund](https://ellaism.org/donate/) if you like this fork.
+Consider mining in [Dev Pool](https://pool.egem.io).
 
 ### Features
 
-**This pool is being further developed to provide an easy to use pool for Ethereum miners. This software is functional however an optimised release of the pool is expected soon. Testing and bug submissions are welcome!**
+**This pool is being further developed to provide an easy to use pool for EGEM miners. This software is functional however an optimised release of the pool is expected soon. Testing and bug submissions are welcome!**
 
 * Support for HTTP and Stratum mining
 * Detailed block stats with luck percentage and full reward
@@ -29,24 +29,25 @@ Dependencies:
   * nodejs >= 4 LTS
   * nginx
 
-**I highly recommend to use Ubuntu 16.04 LTS.**
+**We highly recommend to use Ubuntu 16.04 LTS.** 
 
 First install  [go-ethereum](https://github.com/ethereum/go-ethereum/wiki/Installation-Instructions-for-Ubuntu).
 
 Clone & compile:
 
     git config --global http.https://gopkg.in.followRedirects true
-    git clone https://github.com/sammy007/open-ethereum-pool.git
-    cd open-ethereum-pool
+    git clone https://github.com/TeamEGEM/open-egem-pool.git
+    cd open-egem-pool
     make
 
 Install redis-server.
 
+    apt-get install redis-server
+
 ### Running Pool
 
-    ./build/bin/open-ethereum-pool config.json
+    ./build/bin/open-egem-pool config.json
 
-You can use Ubuntu upstart - check for sample config in <code>upstart.conf</code>.
 
 ### Building Frontend
 
@@ -80,6 +81,11 @@ and add this setting after <code>location /</code>:
     location /api {
         proxy_pass http://api;
     }
+
+
+#### SSL Implementation 
+
+    https://certbot.eff.org/lets-encrypt/ubuntuxenial-nginx
 
 #### Customization
 
