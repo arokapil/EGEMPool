@@ -11,9 +11,9 @@ import (
 
 	"github.com/ethereum/go-ethereum/common/hexutil"
 
-	"github.com/ellaism/open-ethereum-pool/rpc"
-	"github.com/ellaism/open-ethereum-pool/storage"
-	"github.com/ellaism/open-ethereum-pool/util"
+	"github.com/TeamEGEM/open-egem-pool/rpc"
+	"github.com/TeamEGEM/open-egem-pool/storage"
+	"github.com/TeamEGEM/open-egem-pool/util"
 )
 
 const txCheckInterval = 5 * time.Second

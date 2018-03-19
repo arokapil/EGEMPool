@@ -5,8 +5,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/ellaism/open-ethereum-pool/rpc"
-	"github.com/ellaism/open-ethereum-pool/storage"
+	"github.com/TeamEGEM/open-egem-pool/rpc"
+	"github.com/TeamEGEM/open-egem-pool/storage"
 )
 
 func TestMain(m *testing.M) {

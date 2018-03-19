@@ -11,10 +11,10 @@ import (
 
 	"github.com/yvasiyarov/gorelic"
 
-	"github.com/ellaism/open-ethereum-pool/api"
-	"github.com/ellaism/open-ethereum-pool/payouts"
-	"github.com/ellaism/open-ethereum-pool/proxy"
-	"github.com/ellaism/open-ethereum-pool/storage"
+	"github.com/TeamEGEM/open-egem-pool/api"
+	"github.com/TeamEGEM/open-egem-pool/payouts"
+	"github.com/TeamEGEM/open-egem-pool/proxy"
+	"github.com/TeamEGEM/open-egem-pool/storage"
 )
 
 var cfg proxy.Config

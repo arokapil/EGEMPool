@@ -13,10 +13,10 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/ellaism/open-ethereum-pool/policy"
-	"github.com/ellaism/open-ethereum-pool/rpc"
-	"github.com/ellaism/open-ethereum-pool/storage"
-	"github.com/ellaism/open-ethereum-pool/util"
+	"github.com/TeamEGEM/open-egem-pool/policy"
+	"github.com/TeamEGEM/open-egem-pool/rpc"
+	"github.com/TeamEGEM/open-egem-pool/storage"
+	"github.com/TeamEGEM/open-egem-pool/util"
 )
 
 type ProxyServer struct {

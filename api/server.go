@@ -12,8 +12,8 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/ellaism/open-ethereum-pool/storage"
-	"github.com/ellaism/open-ethereum-pool/util"
+	"github.com/TeamEGEM/open-egem-pool/storage"
+	"github.com/TeamEGEM/open-egem-pool/util"
 )
 
 type ApiConfig struct {

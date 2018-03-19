@@ -9,7 +9,7 @@ import (
 	"net"
 	"time"
 
-	"github.com/ellaism/open-ethereum-pool/util"
+	"github.com/TeamEGEM/open-egem-pool/util"
 )
 
 const (

@@ -6,8 +6,8 @@ import (
 	"strings"
 	"errors"
 
-	"github.com/ellaism/open-ethereum-pool/rpc"
-	"github.com/ellaism/open-ethereum-pool/util"
+	"github.com/TeamEGEM/open-egem-pool/rpc"
+	"github.com/TeamEGEM/open-egem-pool/util"
 )
 
 // Allow only lowercase hexadecimal with 0x prefix
