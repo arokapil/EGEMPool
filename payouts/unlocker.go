@@ -30,10 +30,13 @@ type UnlockerConfig struct {
 }
 
 const minDepth = 16
-const byzantiumHardForkHeight = 10000000
+const era0Height = 0
+const era1Height = 10000000
+const era2Height = 20000000
 
-var homesteadReward = math.MustParseBig256("5000000000000000000")
-var byzantiumReward = math.MustParseBig256("4000000000000000000")
+var era0Reward = math.MustParseBig256("8000000000000000000")
+var era1Reward = math.MustParseBig256("4000000000000000000")
+var era2Reward = math.MustParseBig256("2000000000000000000")
 
 // Donate 10% from pool fees to developers
 const donationFee = 10.0
@@ -509,10 +512,13 @@ func weiToShannonInt64(wei *big.Rat) int64 {
 }
 
 func getConstReward(height int64) *big.Int {
-	if height >= byzantiumHardForkHeight {
-		return new(big.Int).Set(byzantiumReward)
+	if height >= era2Height {
+		return new(big.Int).Set(era2Reward)
+	} else if height >= era1Height {
+		return new(big.Int).Set(era1Reward)
+  } else {
+		return new(big.Int).Set(era0Reward)
 	}
-	return new(big.Int).Set(homesteadReward)
 }
 
 func getRewardForUncle(height int64) *big.Int {
@@ -520,14 +526,11 @@ func getRewardForUncle(height int64) *big.Int {
 	return new(big.Int).Div(reward, new(big.Int).SetInt64(32))
 }
 
+
 func getUncleReward(uHeight, height int64) *big.Int {
 	reward := getConstReward(height)
-	if height > byzantiumHardForkHeight {
+	if height > era0Height {
 		reward.Div(reward, big.NewInt(32))
-	} else {
-		k := height - uHeight
-		reward.Mul(big.NewInt(8-k), reward)
-		reward.Div(reward, big.NewInt(8))
 	}
 	return reward
 }
