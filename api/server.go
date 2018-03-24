@@ -136,7 +136,7 @@ func (s *ApiServer) collectStats() {
 	start := time.Now()
 	stats, err := s.backend.CollectStats(s.hashrateWindow, s.config.Blocks, s.config.Payments)
 	if err != nil {
-		log.Printf("Failed to fetch stats from backend: %v", err)
+		log.Printf("Failed to fetch stats from backend occurance 1: %v", err)
 		return
 	}
 	if len(s.config.LuckWindow) > 0 {
@@ -265,20 +265,20 @@ func (s *ApiServer) AccountIndex(w http.ResponseWriter, r *http.Request) {
 		}
 		if err != nil {
 			w.WriteHeader(http.StatusInternalServerError)
-			log.Printf("Failed to fetch stats from backend: %v", err)
+			log.Printf("Failed to fetch stats from backend occurance 2: %v", err)
 			return
 		}
 
 		stats, err := s.backend.GetMinerStats(login, s.config.Payments)
 		if err != nil {
 			w.WriteHeader(http.StatusInternalServerError)
-			log.Printf("Failed to fetch stats from backend: %v", err)
+			log.Printf("Failed to fetch stats from backend occurance 3: %v", err)
 			return
 		}
 		workers, err := s.backend.CollectWorkersStats(s.hashrateWindow, s.hashrateLargeWindow, login)
 		if err != nil {
 			w.WriteHeader(http.StatusInternalServerError)
-			log.Printf("Failed to fetch stats from backend: %v", err)
+			log.Printf("Failed to fetch stats from backend occurance 4: %v", err)
 			return
 		}
 		for key, value := range workers {
