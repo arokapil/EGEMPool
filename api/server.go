@@ -1,4 +1,4 @@
-package api
+[Bpackage api
 
 import (
 	"encoding/json"
@@ -142,7 +142,7 @@ func (s *ApiServer) collectStats() {
 	if len(s.config.LuckWindow) > 0 {
 		stats["luck"], err = s.backend.CollectLuckStats(s.config.LuckWindow)
 		if err != nil {
-			//log.Printf("Failed to fetch luck stats from backend: %v", err)
+			log.Printf("Failed to fetch luck stats from backend: %v", err)
 			return
 		}
 	}
