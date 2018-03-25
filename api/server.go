@@ -1,4 +1,4 @@
-[Bpackage api
+package api
 
 import (
 	"encoding/json"
