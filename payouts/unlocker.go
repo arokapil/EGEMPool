@@ -31,12 +31,20 @@ type UnlockerConfig struct {
 
 const minDepth = 16
 const era0Height = 0
-const era1Height = 2500000
-const era2Height = 5000000
+const era1Height = 2500001
+const era2Height = 5000001
+const era3Height = 7500001
+const era4Height = 10000001
+const era5Height = 12500001
+const era6Height = 15000001
 
 var era0Reward = math.MustParseBig256("8000000000000000000")
 var era1Reward = math.MustParseBig256("4000000000000000000")
 var era2Reward = math.MustParseBig256("2000000000000000000")
+var era3Reward = math.MustParseBig256("1000000000000000000")
+var era4Reward = math.MustParseBig256("500000000000000000")
+var era5Reward = math.MustParseBig256("250000000000000000")
+var era6Reward = math.MustParseBig256("125000000000000000")
 
 // Donate 10% from pool fees to developers
 const donationFee = 10.0
@@ -512,11 +520,19 @@ func weiToShannonInt64(wei *big.Rat) int64 {
 }
 
 func getConstReward(height int64) *big.Int {
-	if height >= era2Height {
+	if height >= era6Height {
+		return new(big.Int).Set(era6Reward)
+	} else if height >= era5Height {
+		return new(big.Int).Set(era5Reward)	
+	} else if height >= era4Height {
+		return new(big.Int).Set(era4Reward)
+	} else if height >= era3Height {
+		return new(big.Int).Set(era3Reward)	
+	} else if height >= era2Height {
 		return new(big.Int).Set(era2Reward)
 	} else if height >= era1Height {
 		return new(big.Int).Set(era1Reward)
-  } else {
+  	} else {
 		return new(big.Int).Set(era0Reward)
 	}
 }
