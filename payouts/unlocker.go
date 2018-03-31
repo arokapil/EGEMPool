@@ -31,8 +31,8 @@ type UnlockerConfig struct {
 
 const minDepth = 16
 const era0Height = 0
-const era1Height = 10000000
-const era2Height = 20000000
+const era1Height = 2500000
+const era2Height = 5000000
 
 var era0Reward = math.MustParseBig256("8000000000000000000")
 var era1Reward = math.MustParseBig256("4000000000000000000")
