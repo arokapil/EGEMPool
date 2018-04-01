@@ -29,7 +29,7 @@ type UnlockerConfig struct {
 	Timeout        string  `json:"timeout"`
 }
 
-const minDepth = 1
+const minDepth = 16
 const era0Height = 0
 const era1Height = 2500001
 const era2Height = 5000001
