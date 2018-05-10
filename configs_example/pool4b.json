@@ -2,21 +2,21 @@
 	"threads": 4,
 	"coin": "egem",
 	"name": "main",
-	"pplns": 9000,
+  "pplns": 9000,
 	"proxy": {
-		"enabled": false,
+		"enabled": true,
 		"listen": "0.0.0.0:8888",
 		"limitHeadersSize": 1024,
 		"limitBodySize": 256,
 		"behindReverseProxy": false,
 		"blockRefreshInterval": "120ms",
 		"stateUpdateInterval": "3s",
-		"difficulty": 2000000000,
+		"difficulty": 4000000000,
 		"hashrateExpiration": "3h",
 		"healthCheck": true,
 		"maxFails": 100,
 		"stratum": {
-			"enabled": false,
+			"enabled": true,
 			"listen": "0.0.0.0:8008",
 			"timeout": "120s",
 			"maxConn": 8192
@@ -42,7 +42,7 @@
 		}
 	},
 	"api": {
-		"enabled": true,
+		"enabled": false,
 		"purgeOnly": false,
 		"purgeInterval": "10m",
 		"listen": "0.0.0.0:8080",
@@ -51,22 +51,13 @@
 		"hashrateLargeWindow": "3h",
 		"luckWindow": [64, 128, 256],
 		"payments": 30,
-		"blocks": 50,
-		"poolCharts":"0 */20 * * * *",
-		"poolChartsNum":74,
-		"minerCharts":"0 */20 * * * *",
-		"minerChartsNum":74
+		"blocks": 50
 	},
 	"upstreamCheckInterval": "5s",
-	"upstream": [
+	"upstream":[
 		{
 			"name": "main",
 			"url": "http://127.0.0.1:8545",
-			"timeout": "10s"
-		},
-		{
-			"name": "backup",
-			"url": "http://127.0.0.2:8545",
 			"timeout": "10s"
 		}
 	],
@@ -79,31 +70,31 @@
 	"unlocker": {
 		"enabled": false,
 		"poolFee": 1.0,
-		"poolFeeAddress": "",
+		"poolFeeAddress": "0x0000000000000000000000000000000000000000",
 		"donate": true,
-		"depth": 120,
+		"depth": 32,
 		"immatureDepth": 20,
-		"keepTxFees": false,
+		"keepTxFees": true,
 		"interval": "10m",
 		"daemon": "http://127.0.0.1:8545",
 		"timeout": "10s"
 	},
 	"payouts": {
 		"enabled": false,
-		"requirePeers": 1,
-		"interval": "10m",
+		"requirePeers": 5,
+		"interval": "15m",
 		"daemon": "http://127.0.0.1:8545",
 		"timeout": "10s",
-		"address": "0x27e9d93fc2446cf6168471f1099e5607cc9e684b",
+		"address": "0x0000000000000000000000000000000000000000",
 		"gas": "21000",
 		"gasPrice": "50000000000",
 		"autoGas": true,
 		"threshold": 500000000,
-		"bgsave": false,
+		"bgsave": true,
 		"concurrentTx": 10
 	},
 	"newrelicEnabled": false,
 	"newrelicName": "MyEtherProxy",
-	"newrelicKey": "SECRET_KEY",
+	"newrelicKey": "",
 	"newrelicVerbose": false
 }
