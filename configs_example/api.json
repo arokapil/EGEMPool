@@ -2,45 +2,6 @@
 	"threads": 4,
 	"coin": "egem",
 	"name": "main",
-	"pplns": 9000,
-	"proxy": {
-		"enabled": false,
-		"listen": "0.0.0.0:8888",
-		"limitHeadersSize": 1024,
-		"limitBodySize": 256,
-		"behindReverseProxy": false,
-		"blockRefreshInterval": "120ms",
-		"stateUpdateInterval": "3s",
-		"difficulty": 2000000000,
-		"hashrateExpiration": "3h",
-		"healthCheck": true,
-		"maxFails": 100,
-		"stratum": {
-			"enabled": false,
-			"listen": "0.0.0.0:8008",
-			"timeout": "120s",
-			"maxConn": 8192
-		},
-		"policy": {
-			"workers": 8,
-			"resetInterval": "60m",
-			"refreshInterval": "1m",
-			"banning": {
-				"enabled": false,
-				"ipset": "blacklist",
-				"timeout": 1800,
-				"invalidPercent": 30,
-				"checkThreshold": 30,
-				"malformedLimit": 5
-			},
-			"limits": {
-				"enabled": false,
-				"limit": 30,
-				"grace": "5m",
-				"limitJump": 10
-			}
-		}
-	},
 	"api": {
 		"enabled": true,
 		"purgeOnly": false,
@@ -58,15 +19,10 @@
 		"minerChartsNum":74
 	},
 	"upstreamCheckInterval": "5s",
-	"upstream": [
+	"upstream":[
 		{
 			"name": "main",
 			"url": "http://127.0.0.1:8545",
-			"timeout": "10s"
-		},
-		{
-			"name": "backup",
-			"url": "http://127.0.0.2:8545",
 			"timeout": "10s"
 		}
 	],
@@ -76,34 +32,8 @@
 		"database": 0,
 		"password": ""
 	},
-	"unlocker": {
-		"enabled": false,
-		"poolFee": 1.0,
-		"poolFeeAddress": "",
-		"donate": true,
-		"depth": 120,
-		"immatureDepth": 20,
-		"keepTxFees": false,
-		"interval": "10m",
-		"daemon": "http://127.0.0.1:8545",
-		"timeout": "10s"
-	},
-	"payouts": {
-		"enabled": false,
-		"requirePeers": 1,
-		"interval": "10m",
-		"daemon": "http://127.0.0.1:8545",
-		"timeout": "10s",
-		"address": "0x27e9d93fc2446cf6168471f1099e5607cc9e684b",
-		"gas": "21000",
-		"gasPrice": "50000000000",
-		"autoGas": true,
-		"threshold": 500000000,
-		"bgsave": false,
-		"concurrentTx": 10
-	},
 	"newrelicEnabled": false,
 	"newrelicName": "MyEtherProxy",
-	"newrelicKey": "SECRET_KEY",
+	"newrelicKey": "",
 	"newrelicVerbose": false
 }
