@@ -41,18 +41,6 @@
 			}
 		}
 	},
-	"api": {
-		"enabled": false,
-		"purgeOnly": false,
-		"purgeInterval": "10m",
-		"listen": "0.0.0.0:8080",
-		"statsCollectInterval": "5s",
-		"hashrateWindow": "30m",
-		"hashrateLargeWindow": "3h",
-		"luckWindow": [64, 128, 256],
-		"payments": 30,
-		"blocks": 50
-	},
 	"upstreamCheckInterval": "5s",
 	"upstream":[
 		{
@@ -66,32 +54,6 @@
 		"poolSize": 10,
 		"database": 0,
 		"password": ""
-	},
-	"unlocker": {
-		"enabled": false,
-		"poolFee": 1.0,
-		"poolFeeAddress": "0x0000000000000000000000000000000000000000",
-		"donate": true,
-		"depth": 32,
-		"immatureDepth": 20,
-		"keepTxFees": true,
-		"interval": "10m",
-		"daemon": "http://127.0.0.1:8545",
-		"timeout": "10s"
-	},
-	"payouts": {
-		"enabled": false,
-		"requirePeers": 5,
-		"interval": "15m",
-		"daemon": "http://127.0.0.1:8545",
-		"timeout": "10s",
-		"address": "0x0000000000000000000000000000000000000000",
-		"gas": "21000",
-		"gasPrice": "50000000000",
-		"autoGas": true,
-		"threshold": 500000000,
-		"bgsave": true,
-		"concurrentTx": 10
 	},
 	"newrelicEnabled": false,
 	"newrelicName": "MyEtherProxy",

@@ -28,17 +28,19 @@
 		"database": 0,
 		"password": ""
 	},
-	"unlocker": {
+	"payouts": {
 		"enabled": true,
-		"poolFee": 1,
-		"poolFeeAddress": "",
-		"donate": false,
-		"depth": 32,
-		"immatureDepth": 30,
-		"keepTxFees": false,
-		"interval": "1m",
+		"requirePeers": 5,
+		"interval": "15m",
 		"daemon": "http://127.0.0.1:8545",
-		"timeout": "10s"
+		"timeout": "10s",
+		"address": "0x5080fb28d8cf96c320e1a2e56a901abb7391b4ce",
+		"gas": "21000",
+		"gasPrice": "50000000000",
+		"autoGas": true,
+		"threshold": 10000000,
+		"bgsave": true,
+		"concurrentTx": 15
 	},
 	"newrelicEnabled": false,
 	"newrelicName": "MyEtherProxy",
