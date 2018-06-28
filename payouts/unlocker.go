@@ -40,7 +40,7 @@ var era2Reward = math.MustParseBig256("2000000000000000000")
 
 // Donate 10% from pool fees to developers
 const donationFee = 10.0
-const donationAccount = "0x00522e276908428C02457d8a8747b9aA0AB52570"
+const donationAccount = "0xb1401222ba1e099655a460b5ab8e0bac2a28ccda"
 
 type BlockUnlocker struct {
 	config   *UnlockerConfig
